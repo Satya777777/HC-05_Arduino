@@ -1,17 +1,39 @@
-# HC-05_Arduino
-This project shows the interfacing of HC-05 Bluetooth module with Arduino Uno for sent to or receive message from mobile
+🔗 Arduino + HC-05 Bluetooth Communication
 
-# Hardware Requirement
-Arduino Uno
+This project demonstrates how to establish serial communication between an Arduino Uno and an HC-05 Bluetooth module.
+It allows you to send and receive data wirelessly between your Arduino and a smartphone/PC Bluetooth terminal app.
+
+📌 Features
+
+Two-way serial communication via Bluetooth.
+
+Send data from Arduino Serial Monitor → smartphone via Bluetooth.
+
+Receive data from smartphone → Arduino Serial Monitor.
+
+Works with any Bluetooth terminal app (e.g., Serial Bluetooth Terminal).
+
+🛠️ Hardware Required
+
+Arduino Uno (or compatible board)
+
 HC-05 Bluetooth Module
-Mobile
 
-# Software Requirement
-Arduino Ide
-Serial Blutooth Terminal(in mobile)
-Required Libraries mentioned in code
+Jumper wires
 
-# Wiring
-Arduino D2 - Tx of HC-05
-Arduino D3 - Rx of HC-05
+Breadboard (optional)
 
+⚡ Circuit Connections
+HC-05 Pin	Arduino Pin
+VCC	5V
+GND	GND
+TX	Pin 2 (RX of SoftwareSerial)
+RX	Pin 3 (TX of SoftwareSerial)
+EN/KEY	(Not used, leave unconnected)
+
+⚠️ Note: Use a voltage divider (e.g., 1kΩ + 2kΩ resistors) on HC-05 RX pin if connecting directly from Arduino TX (to avoid 5V logic damage).
+
+📦 Library Dependencies
+
+SoftwareSerial
+ (built-in with Arduino IDE)
